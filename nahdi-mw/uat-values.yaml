@@ -1,0 +1,13 @@
+replicaCount: 3
+image:
+  repository: nginx
+  tag: stable
+service:
+  type: LoadBalancer
+  port: 80
+env:
+  - name: ENVIRONMENT
+    value: "uat"
+  - name: APP_NAME
+    value: "nahdi-mw"
+project: production

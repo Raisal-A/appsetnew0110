@@ -1,0 +1,13 @@
+replicaCount: 2
+image:
+  repository: nginx
+  tag: stable
+service:
+  type: ClusterIP
+  port: 80
+env:
+  - name: ENVIRONMENT
+    value: "qa"
+  - name: APP_NAME
+    value: "nahdi-sso"
+project: production
